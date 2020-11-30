@@ -106,7 +106,7 @@ ggplot(df_corr, aes(x=lymphocyte, y=outcome)) +
   geom_point() + geom_vline(xintercept = 14.7)
 ```
 
-# Zmiana w czasie liczbie ozdrowienców oraz zmarłych
+# Zmiana w czasie w liczbie ozdrowienców oraz zmarłych
 ```{r, warning=FALSE, cache=TRUE}
 df_sum <- df_newest[4:5] %>% mutate(Discharge.time = substr(Discharge.time,1,10),
                          Survived = case_when(
